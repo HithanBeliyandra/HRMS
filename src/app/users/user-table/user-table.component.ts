@@ -57,6 +57,18 @@ export class UserTableComponent implements OnInit {
     })
   }
 
+  deleteUser(id:any){
+    this.userService.deleteUserService(id).subscribe({
+      next:(res)=>{
+        alert("user deleted successfully");
+        this.getAlluser();
+      },
+      error:()=>{
+        alert("error while deleting user");
+      }
+    })
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -78,8 +90,8 @@ activateSelectedUsers() {
   this.selection.selected.forEach( user => {
 
     this.userService.activateUser(user,user.id).subscribe((_res: any)=>{
-      user.status="Activated";
-      console.log(this.user.status);
+      user.status="Active";
+      console.log(this.selection.selected);
       this.getAlluser();
     });
   
@@ -91,7 +103,8 @@ deActivateSelectedUsers() {
   this.selection.selected.forEach( user => {
 
     this.userService.activateUser(user,user.id).subscribe((_res: any)=>{
-      user.status="Deactivate";
+      user.status="Deactive";
+      alert("deactivated")
 
       console.log(this.selection.selected);
       
@@ -100,6 +113,14 @@ deActivateSelectedUsers() {
   
  });
  
+}
+
+deActivateUsers(id:any){
+  this.userService.activateUser(user,id).subscribe((_res: any)=>{
+    this.user.status="Deactive";
+    alert("deactivated")
+    this.getAlluser();
+  });
 }
 
 /** Selects all rows if they are not all selected; otherwise clear selection. */

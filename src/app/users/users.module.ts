@@ -19,6 +19,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
     MatPaginatorModule,
     MatSortModule,
     MatIconModule,
-    MatChipsModule
+    MatChipsModule,
+    MatMenuModule
   ]
 })
 export class UsersModule { }

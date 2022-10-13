@@ -17,6 +17,8 @@ export class UserService {
   }
   activateUser(data:any,id:any){
     return this.http.put(`http://localhost:3000/Users/${id}`,data);
-    
+  }
+  deleteUserService(id:string){
+    return this.http.delete<user>(`http://localhost:3000/Users/${id}`);
   }
 }
