@@ -1,119 +1,24 @@
 {
   "users": [
     {
-      "id": "6346a63ec7963490285fdd73",
-      "isActive": false,
-      "email": "aprilcox@newcube.com",
-      "role": "admin",
-      "registered": "2017-05-23T12:07:32 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e7844299ea50ee7de",
-      "isActive": true,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2020-04-24T06:53:58 -06:-30"
-    },
-    {
-      "id": "6346a63e1fd5422ef2e67d07",
-      "isActive": false,
-      "email": "aprilcox@newcube.com",
-      "role": "admin",
-      "registered": "2021-01-15T10:48:33 -06:-30",
-      "status": "Activated"
-    },
-    {
       "id": "6346a63e2795bb00cb0d6ba7",
-      "isActive": false,
       "email": "aprilcox@newcube.com",
       "role": "user",
       "registered": "2015-06-14T01:11:30 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e0bba381e866099be",
-      "isActive": true,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2014-12-05T07:09:25 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e51e8d59866b189e2",
-      "isActive": true,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2016-11-18T10:53:12 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e268053cfa9a67ef1",
-      "isActive": false,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2018-03-11T08:21:04 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e194e6fdc2258437e",
-      "isActive": true,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2020-07-12T09:39:52 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e6e0a352d01fddaa7",
-      "isActive": false,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2022-02-10T01:10:41 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e22aecf090be744fb",
-      "isActive": true,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2022-09-23T08:52:13 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63ee5718b7581edbdd0",
-      "isActive": false,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2016-11-26T11:34:52 -06:-30",
-      "status": "Activated"
-    },
-    {
-      "id": "6346a63e2dc3a0dbcaa110c7",
-      "isActive": true,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2016-07-23T10:25:38 -06:-30",
-      "status": "Activated"
+      "status": "Deactivate"
     },
     {
       "id": "6346a63e357b8a24512e222c",
-      "isActive": true,
       "email": "aprilcox@newcube.com",
       "role": "user",
       "registered": "2020-03-01T01:38:17 -06:-30",
       "status": "Activated"
     },
     {
-      "id": "6346a63e6175bf9f78dff303",
-      "isActive": false,
-      "email": "aprilcox@newcube.com",
-      "role": "user",
-      "registered": "2019-11-23T05:43:54 -06:-30",
-      "status": "Activated"
+      "id": "6346a63e6175bf9f78dff303"
     },
     {
       "id": "6346a63e14a75b00dfaea269",
-      "isActive": true,
       "email": "aprilcox@newcube.com",
       "role": "user",
       "registered": "2021-06-22T08:44:28 -06:-30",
@@ -121,7 +26,6 @@
     },
     {
       "id": "6346a63ed5f3329247892497",
-      "isActive": true,
       "email": "aprilcox@newcube.com",
       "role": "user",
       "registered": "2016-07-12T01:27:54 -06:-30",
@@ -129,7 +33,221 @@
     },
     {
       "id": "6346a63ede69d13f9e022626",
-      "isActive": false,
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2015-08-18T09:16:00 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "email": "",
+      "role": "",
+      "id": "9Vik6EC"
+    },
+    {
+      "id": "6346a63e357b8a24512e222c",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2020-03-01T01:38:17 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e6175bf9f78dff303",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2019-11-23T05:43:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e14a75b00dfaea269",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2021-06-22T08:44:28 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ed5f3329247892497",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2016-07-12T01:27:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ede69d13f9e022626",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2015-08-18T09:16:00 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e357b8a24512e222c",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2020-03-01T01:38:17 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e6175bf9f78dff303",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2019-11-23T05:43:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e14a75b00dfaea269",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2021-06-22T08:44:28 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ed5f3329247892497",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2016-07-12T01:27:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ede69d13f9e022626",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2015-08-18T09:16:00 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e357b8a24512e222c",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2020-03-01T01:38:17 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e6175bf9f78dff303",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2019-11-23T05:43:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e14a75b00dfaea269",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2021-06-22T08:44:28 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ed5f3329247892497",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2016-07-12T01:27:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ede69d13f9e022626",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2015-08-18T09:16:00 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e357b8a24512e222c",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2020-03-01T01:38:17 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e6175bf9f78dff303",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2019-11-23T05:43:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e14a75b00dfaea269",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2021-06-22T08:44:28 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ed5f3329247892497",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2016-07-12T01:27:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ede69d13f9e022626",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2015-08-18T09:16:00 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e357b8a24512e222c",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2020-03-01T01:38:17 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e6175bf9f78dff303",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2019-11-23T05:43:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e14a75b00dfaea269",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2021-06-22T08:44:28 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ed5f3329247892497",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2016-07-12T01:27:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ede69d13f9e022626",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2015-08-18T09:16:00 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e357b8a24512e222c",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2020-03-01T01:38:17 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e6175bf9f78dff303",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2019-11-23T05:43:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63e14a75b00dfaea269",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2021-06-22T08:44:28 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ed5f3329247892497",
+      "email": "aprilcox@newcube.com",
+      "role": "user",
+      "registered": "2016-07-12T01:27:54 -06:-30",
+      "status": "Activated"
+    },
+    {
+      "id": "6346a63ede69d13f9e022626",
       "email": "aprilcox@newcube.com",
       "role": "user",
       "registered": "2015-08-18T09:16:00 -06:-30",
