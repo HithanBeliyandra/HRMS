@@ -1,3 +1,4 @@
+import { UsersModule } from '../users/users.module';
 export const childRoutes = [
   {
     path: 'dashboard',
@@ -13,4 +14,12 @@ export const childRoutes = [
       ),
     data: { icon: 'assignment', text: 'EmployeeDetails' }
   },
+  {
+    path: 'users',
+    loadChildren: () =>
+      import('src/app/users/users.module').then(
+        m => m.UsersModule
+      ),
+    data: { icon: 'assignment', text: 'Users' }
+  }
 ];

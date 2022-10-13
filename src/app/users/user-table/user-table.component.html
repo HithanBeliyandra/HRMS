@@ -1,0 +1,102 @@
+
+
+  
+
+  <div class="top">
+    <button mat-stroked-button disabled="true">Re-Invite</button>&nbsp;
+    <button mat-stroked-button color="primary" disabled="true">Revoke</button>&nbsp;
+    <button mat-stroked-button color="accent" (click)="activateSelectedUsers()">Activate</button>&nbsp;
+    <button mat-stroked-button color="warn" (click)="deActivateSelectedUsers()">Deactivate</button>
+    <button mat-stroked-button disabled="true" id="csv">Export CSV</button>
+  <button mat-raised-button color="accent" (click)="openDialog()" id="Invite-btn">Invite-user+</button>
+<mat-form-field appearance="standard"  class="filter">
+  <mat-label>Search user</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field>
+</div>
+
+  <div class="container">
+    <div style="margin-top:25px">
+      
+      
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+      
+          <ng-container matColumnDef="select" id="select">
+              <th mat-header-cell *matHeaderCellDef class="w-75">
+                <mat-checkbox   (change)="$event ? masterToggle() : null"
+                [checked]="selection.hasValue() && isAllSelected()"
+                [indeterminate]="selection.hasValue() && !isAllSelected()">
+
+                </mat-checkbox>
+              </th>
+              <td mat-cell *matCellDef="let row">
+
+                <mat-checkbox (click)="$event.stopPropagation()"
+                (change)="$event ? selection.toggle(row) : null"
+                [checked]="selection.isSelected(row)">
+  </mat-checkbox>
+              </td>
+          </ng-container>
+          <!-- email Column -->
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+          </ng-container>
+      
+          <!-- role Column -->
+          <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
+            <td mat-cell *matCellDef="let row"> {{row.role}} </td>
+          </ng-container>
+
+          <!-- status Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-select-header>
+              
+              <mat-form-field appearance="legacy " style="width: 70px; font-size: medium;">
+                <mat-label>Status</mat-label>
+                <mat-select multiple>
+                  
+                  <mat-option *ngFor="let status of statusList" [value]="status">{{status}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+            </th>
+            <td mat-cell *matCellDef="let row">Active </td>
+          </ng-container>
+
+          <!-- Last Activity Column -->
+          <ng-container matColumnDef="lastActivity">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Activity </th>
+            <td mat-cell *matCellDef="let row">2022-05-25T01:16:03 -06:-30</td>
+          </ng-container>
+
+          <!-- Action Column -->
+          <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action</th>
+            <td mat-cell *matCellDef="let row"> 
+              <button mat-icon-button color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" (click)="openProfile()">
+                <mat-icon>menu</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+      
+  
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the search "{{input.value}}"</td>
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+    </div>
+  </div>
