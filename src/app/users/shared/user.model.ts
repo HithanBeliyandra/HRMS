@@ -3,5 +3,7 @@ export class user{
  email:string;
  role:string;
  status:string;
- lastActivity:Date;
+ lastActivity:string;
+ docs:boolean;
+ empForm:boolean;
 }

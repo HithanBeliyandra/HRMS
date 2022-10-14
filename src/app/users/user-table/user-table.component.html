@@ -1,5 +1,9 @@
 
-
+    <!-- <div *ngFor="let user of user">
+      <ng-container *ngIf="user.status=== 'Active'">
+        <button mat-stroked-button color="warn" (click)="deActivateSelectedUsers()">Deactivate</button>
+      </ng-container>
+  </div> -->
   
 
   <div class="top">
@@ -55,33 +59,15 @@
             <th mat-header-cell *matHeaderCellDef mat-select-header>
               
               <mat-form-field appearance="legacy " style="width: 70px; font-size: medium;">
-                <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-                  <mat-label>Status</mat-label>
-                </button>
-                <mat-menu #menu="matMenu">
-                  <button mat-menu-item>
-                    <mat-icon>delete</mat-icon>
-                    <span>Delete</span>
-                  </button>
-                  <button mat-menu-item disabled>
-                    <mat-icon>contacts</mat-icon>
-                    <span>Profile</span>
-                  </button>
-                  <button mat-menu-item>
-                    <mat-icon>voice_over_off</mat-icon>
-                    <span>Disable account</span>
-                  </button>
-                
-                </mat-menu> -->
              
                 <mat-label>Status</mat-label>
-                <mat-select multiple>
+                <mat-select>
                   
-                  <mat-option >Active</mat-option>
-                  <mat-option >Deactivated</mat-option>
-                  <mat-option >Pending</mat-option>
-                  <mat-option >Expired</mat-option>
-                  <button mat-raised-button color="primary" style="width:100%">Apply</button> 
+                  <mat-option ><button mat-button>Activate</button></mat-option>
+                  <mat-option ><button mat-button>Deactivate</button></mat-option>
+                  <mat-option ><button mat-button>Pending</button></mat-option>
+                  <mat-option ><button mat-button>Expired</button></mat-option>
+                  <!-- <button mat-raised-button color="primary" style="width:100%">Apply</button>  -->
                 </mat-select>
               </mat-form-field>
 
@@ -99,8 +85,8 @@
           <ng-container matColumnDef="Action">
             <th mat-header-cell *matHeaderCellDef> Action</th>
             <td mat-cell *matCellDef="let row"> 
-              <button mat-icon-button color="primary" aria-label="Example icon button with a menu icon">
-                <mat-label>role edit</mat-label>
+              <button mat-icon-button color="primary" aria-label="Example icon button with a menu icon" (click)="editUser(row)">
+                <mat-label>Edit</mat-label>
               </button>&nbsp;&nbsp;&nbsp;&nbsp;
               <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
                 <mat-icon>more_vert</mat-icon>
@@ -110,7 +96,7 @@
                   <mat-icon>delete</mat-icon>
                   <span>Delete</span>
                 </button>
-                <button mat-menu-item disabled>
+                <button mat-menu-item (click)="openProfile()">
                   <mat-icon>contacts</mat-icon>
                   <span>Profile</span>
                 </button>

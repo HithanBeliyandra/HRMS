@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, Inject, OnInit,ViewChild } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UserInviteComponent } from '../user-invite/user-invite.component';
 import { UserService } from '../shared/user.service';
@@ -9,6 +9,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { user } from '../shared/user.model';
 import { ViewProfileComponent } from '../view-profile/view-profile.component';
 
+
 @Component({
   selector: 'app-user-table',
   templateUrl: './user-table.component.html',
@@ -17,13 +18,13 @@ import { ViewProfileComponent } from '../view-profile/view-profile.component';
 export class UserTableComponent implements OnInit {
   displayedColumns: string[] = ['select','email', 'role','status','lastActivity','Action'];
   dataSource: MatTableDataSource<user>;
-  statusList:string[]=['Activate','Deactivate','Pending','Expired'];
+  statusList:string[]=['Active','Deactive','Pending','Expired'];
   user:user=new user();
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   selection = new SelectionModel<user>(true, []);
-
+  showEmail:boolean=false;
   constructor(public dialog: MatDialog, private userService:UserService) { }
 
 
@@ -34,11 +35,29 @@ export class UserTableComponent implements OnInit {
   openDialog() {
     this.dialog.open(UserInviteComponent, {
       width:'30%'
+    }).afterClosed().subscribe(val=>{
+      if(val==='Invite'){
+        this.getAlluser();
+      }
     });
   }
+
+  editUser(row:any) {
+
+    this.dialog.open(UserInviteComponent, {
+      width:'30%',
+      data:row
+    }).afterClosed().subscribe(val=>{
+      if(val==='save'){
+        this.getAlluser();
+      }
+    });
+    this.showEmail = true;
+  }
+
   openProfile() {
     this.dialog.open(ViewProfileComponent, {
-      width:'20%'
+      width:'40%'
     });
   }
 

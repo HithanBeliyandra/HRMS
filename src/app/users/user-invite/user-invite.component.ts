@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder,Validators, FormControl } from '@angular/forms';
 import { UserService } from '../shared/user.service';
-import { MatDialogRef } from '@angular/material/dialog';
-import { COMMA, ENTER} from '@angular/cdk/keycodes'
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { COMMA, ENTER, I} from '@angular/cdk/keycodes'
 
 @Component({
   selector: 'app-user-invite',
@@ -15,8 +15,13 @@ export class UserInviteComponent implements OnInit {
   public seperatorKeysCodes:number[]=[ENTER, COMMA];
   public emailList=[];
   removable=true;
+  actionBtn:string="Invite";
+  showEmail:boolean=false;
+  formTitle:string="Invite users:"
 
-  constructor(private formBuilder:FormBuilder,private userService:UserService, private dialogRef:MatDialogRef<UserInviteComponent>) { }
+
+  constructor(private formBuilder:FormBuilder,private userService:UserService, private dialogRef:MatDialogRef<UserInviteComponent>,
+    @Inject(MAT_DIALOG_DATA) public editData:any) { }
 
   paste(event: ClipboardEvent): void {
     event.preventDefault();
@@ -59,15 +64,33 @@ export class UserInviteComponent implements OnInit {
   ngOnInit(): void {
     this.userForm=this.formBuilder.group({
       email:[''],
-      role:['']
-    })
+      role:[''],
+      docs:[''],
+      empForm:[''],
+      status:[''],
+    });
+    if(this.editData){
+      this.formTitle="update user:"
+      this.showEmail=true;
+      this.actionBtn="save";
+      this.userForm.controls['email'].setValue(this.editData.email);
+      this.userForm.controls['role'].setValue(this.editData.role);
+      this.userForm.controls['docs'].setValue(this.editData.docs);
+      this.userForm.controls['empForm'].setValue(this.editData.empForm);
+      this.userForm.controls['status'].setValue(this.editData.status);
+    }
+    
   }
   invite(){
+    this.showEmail=true;
+    if(!this.editData){
     if(this.userForm.valid){
       this.userService.postUser(this.userForm.value)
       .subscribe({
         next:(res)=>{
           alert("user added");
+          console.log(this.userForm.value);
+          
           this.userForm.reset(); 
           this.dialogRef.close();
         },
@@ -76,7 +99,23 @@ export class UserInviteComponent implements OnInit {
         }
       })
     }
-   
+  }else{
+      this.updateUser();
+  }
+  }
+
+  updateUser(){
+    this.userService.editUserService(this.userForm.value,this.editData.id)
+    .subscribe({
+      next:(res)=>{
+        alert("Update successfull");
+        this.userForm.reset();
+        this.dialogRef.close('save');
+      },
+      error:()=>{
+        alert("Something went wrong");
+      }
+    })
   }
 
   private validateArrayNotEmpty(c: FormControl) {

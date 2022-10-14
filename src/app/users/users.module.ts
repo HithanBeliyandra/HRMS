@@ -20,6 +20,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -45,7 +48,13 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSortModule,
     MatIconModule,
     MatChipsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatDividerModule,
+    MatProgressBarModule
+    
+   
+
   ]
 })
 export class UsersModule { }
