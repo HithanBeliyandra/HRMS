@@ -20,6 +20,7 @@ export class UserService {
   activateUser(data:any,id:any){
     return this.http.put(`http://localhost:3000/Users/${id}`,data);
   }
+<<<<<<< HEAD
 
   deleteUserService(id:string){
     return this.http.delete<user>(`http://localhost:3000/Users/${id}`);
@@ -31,5 +32,9 @@ export class UserService {
 
   getUserById(id: string){
     return this.http.get(`http://localhost:3000/Users/${id}`);
+=======
+  deleteUserService(id:string){
+    return this.http.delete<user>(`http://localhost:3000/Users/${id}`);
+>>>>>>> 409846bc83f1f443e05e20707b8bea7a702bff5b
   }
 }
